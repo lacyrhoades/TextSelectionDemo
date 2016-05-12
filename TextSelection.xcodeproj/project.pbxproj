@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FC247711CE6047E00822796 /* String+CharSearching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC247701CE6047E00822796 /* String+CharSearching.swift */; };
+		0FC247731CE624D900822796 /* DebugConsole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC247721CE624D900822796 /* DebugConsole.swift */; };
+		0FC247751CE62BC700822796 /* UILabel+Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC247741CE62BC700822796 /* UILabel+Space.swift */; };
 		0FE7076C1CE4E5B7007CF30A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE7076B1CE4E5B7007CF30A /* AppDelegate.swift */; };
 		0FE7076E1CE4E5B7007CF30A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE7076D1CE4E5B7007CF30A /* ViewController.swift */; };
 		0FE707711CE4E5B7007CF30A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FE7076F1CE4E5B7007CF30A /* Main.storyboard */; };
 		0FE707731CE4E5B7007CF30A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FE707721CE4E5B7007CF30A /* Assets.xcassets */; };
 		0FE707761CE4E5B7007CF30A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FE707741CE4E5B7007CF30A /* LaunchScreen.storyboard */; };
+		0FE7077F1CE4E84E007CF30A /* HighlightLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE7077D1CE4E83C007CF30A /* HighlightLabel.swift */; };
+		0FE707831CE511CE007CF30A /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE707821CE511CE007CF30A /* Selection.swift */; };
+		0FE707861CE512C4007CF30A /* NSAttributedString+TextSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE707851CE512C4007CF30A /* NSAttributedString+TextSelection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FC247701CE6047E00822796 /* String+CharSearching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+CharSearching.swift"; path = "Extensions/String+CharSearching.swift"; sourceTree = "<group>"; };
+		0FC247721CE624D900822796 /* DebugConsole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugConsole.swift; path = Views/DebugConsole.swift; sourceTree = "<group>"; };
+		0FC247741CE62BC700822796 /* UILabel+Space.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UILabel+Space.swift"; path = "Extensions/UILabel+Space.swift"; sourceTree = "<group>"; };
 		0FE707681CE4E5B7007CF30A /* TextSelection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextSelection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE7076B1CE4E5B7007CF30A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FE7076D1CE4E5B7007CF30A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +31,9 @@
 		0FE707721CE4E5B7007CF30A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FE707751CE4E5B7007CF30A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FE707771CE4E5B7007CF30A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FE7077D1CE4E83C007CF30A /* HighlightLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HighlightLabel.swift; path = Views/HighlightLabel.swift; sourceTree = "<group>"; };
+		0FE707821CE511CE007CF30A /* Selection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
+		0FE707851CE512C4007CF30A /* NSAttributedString+TextSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSAttributedString+TextSelection.swift"; path = "Extensions/NSAttributedString+TextSelection.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,9 @@
 		0FE7076A1CE4E5B7007CF30A /* TextSelection */ = {
 			isa = PBXGroup;
 			children = (
+				0FE707841CE51293007CF30A /* Extensions */,
+				0FE707811CE511C6007CF30A /* Model */,
+				0FE707801CE4EF85007CF30A /* Views */,
 				0FE7076B1CE4E5B7007CF30A /* AppDelegate.swift */,
 				0FE7076D1CE4E5B7007CF30A /* ViewController.swift */,
 				0FE7076F1CE4E5B7007CF30A /* Main.storyboard */,
@@ -62,6 +77,33 @@
 				0FE707771CE4E5B7007CF30A /* Info.plist */,
 			);
 			path = TextSelection;
+			sourceTree = "<group>";
+		};
+		0FE707801CE4EF85007CF30A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0FE7077D1CE4E83C007CF30A /* HighlightLabel.swift */,
+				0FC247721CE624D900822796 /* DebugConsole.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		0FE707811CE511C6007CF30A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0FE707821CE511CE007CF30A /* Selection.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0FE707841CE51293007CF30A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0FE707851CE512C4007CF30A /* NSAttributedString+TextSelection.swift */,
+				0FC247701CE6047E00822796 /* String+CharSearching.swift */,
+				0FC247741CE62BC700822796 /* UILabel+Space.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +177,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FE707831CE511CE007CF30A /* Selection.swift in Sources */,
+				0FE7077F1CE4E84E007CF30A /* HighlightLabel.swift in Sources */,
 				0FE7076E1CE4E5B7007CF30A /* ViewController.swift in Sources */,
+				0FC247751CE62BC700822796 /* UILabel+Space.swift in Sources */,
+				0FC247711CE6047E00822796 /* String+CharSearching.swift in Sources */,
+				0FC247731CE624D900822796 /* DebugConsole.swift in Sources */,
+				0FE707861CE512C4007CF30A /* NSAttributedString+TextSelection.swift in Sources */,
 				0FE7076C1CE4E5B7007CF30A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +336,7 @@
 				0FE7077C1CE4E5B7007CF30A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
