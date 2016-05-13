@@ -78,7 +78,7 @@ class ViewController: UIViewController {
     }
     
     func didTapButton() {
-        if (self.label.selection != nil) {
+        if (self.label.selection != nil && self.label.preSelection == nil) {
             self.label.clearSelection()
         } else {
             self.label.appendPreSelectionToSelection()
