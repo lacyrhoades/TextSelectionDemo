@@ -81,7 +81,6 @@ class HighlightLabel: UIView {
         self.addSubview(self.hightlightBoundsView)
         
         self.label = UILabel()
-        self.label.font = self.label.font.fontWithSize(14.0)
         self.label.numberOfLines = 0
         self.label.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(self.label)

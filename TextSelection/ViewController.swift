@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.mode.append(.ShowConsole)
+//        self.mode.append(.ShowConsole)
         
         self.label = HighlightLabel()
         self.label.delegate = self
