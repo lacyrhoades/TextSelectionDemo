@@ -42,12 +42,7 @@ class ViewController: UIViewController {
             self.labelSelectionDidChange()
         }
         
-        let doubleTap = UITapGestureRecognizer()
-        doubleTap.numberOfTapsRequired = 2
-        doubleTap.addTarget(self, action: #selector(didDoubleTapButton))
-        
         self.button = UIButton(type:.Custom)
-        self.button.addGestureRecognizer(doubleTap)
         self.button.addTarget(self, action: #selector(didTapButton), forControlEvents: .TouchUpInside)
         self.button.alpha = 0.8
         self.button .setBackgroundImage(UIImage(named: "blue_circle"), forState: .Normal)
@@ -83,11 +78,11 @@ class ViewController: UIViewController {
     }
     
     func didTapButton() {
-        self.label.appendPreSelectionToSelection()
-    }
-    
-    func didDoubleTapButton() {
-        self.label.clearSelection()
+        if (self.label.selection != nil) {
+            self.label.clearSelection()
+        } else {
+            self.label.appendPreSelectionToSelection()
+        }
     }
 }
 

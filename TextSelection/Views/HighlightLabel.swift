@@ -81,6 +81,7 @@ class HighlightLabel: UIView {
         self.addSubview(self.hightlightBoundsView)
         
         self.label = UILabel()
+        self.label.font = self.label.font.fontWithSize(14.0)
         self.label.numberOfLines = 0
         self.label.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(self.label)
@@ -146,8 +147,6 @@ class HighlightLabel: UIView {
     }
     
     func updateViews(animated: Bool) {
-        self.label.font = self.label.font.fontWithSize(self.fontSize())
-        
         textStorage.setAttributes(self.baseAttributes, range:textStorage.fullRange)
         
         self.selectionBoundsView.alpha = 0.0
@@ -311,18 +310,6 @@ extension HighlightLabel {
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let touch = touches.first {
             self.finishHighlighting(self.label.touchLocationInTextArea(touch))
-        }
-    }
-}
-
-extension HighlightLabel {
-    func fontSize() -> CGFloat {
-        if (self.frame.width > 500) {
-            return 20.0
-        } else if (self.frame.width > 400) {
-            return 18.0
-        } else {
-            return 14.0
         }
     }
 }

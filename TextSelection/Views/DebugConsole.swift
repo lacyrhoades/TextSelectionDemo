@@ -24,7 +24,7 @@ class DebugConsole: UIView {
         
         self.label1 = UILabel()
         self.label1.numberOfLines = 0
-        self.label1.font = self.label1.font.fontWithSize(8.0)
+        self.label1.font = self.label1.font.fontWithSize(12.0)
         self.label1.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(self.label1)
         
