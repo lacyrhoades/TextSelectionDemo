@@ -13,10 +13,10 @@ let translucentPreSelectionAlpha: CGFloat = 0.5
 let translucentSelectionAlpha: CGFloat = 1.0
 
 let highlightTextColor: UIColor = UIColor.whiteColor()
-let highlightSelectionColor: UIColor = UIColor(red: 74/255.0, green: 144/255.0, blue: 226/255.0, alpha: 1)
+let highlightSelectionColor: UIColor = UIColor(red: 164/255.0, green: 164/255.0, blue: 164/255.0, alpha: 1)
 
 let preSelectionTextColor: UIColor = UIColor.whiteColor()
-let preSelectionColor: UIColor = UIColor(red: 74/255.0, green: 144/255.0, blue: 226/255.0, alpha: 1)
+let preSelectionColor: UIColor = UIColor(red: 131/255.0, green: 141/255.0, blue: 153/255.0, alpha: 1)
 
 let selectionTextColor: UIColor = UIColor.whiteColor()
 let selectionColor: UIColor = UIColor(red: 25/255.0, green: 133/255.0, blue: 255/255.0, alpha: 1)
@@ -146,12 +146,12 @@ class HighlightLabel: UIView {
     }
     
     func updateViews(animated: Bool) {
-        textStorage.setAttributes(self.baseAttributes, range:textStorage.fullRange)
+        self.textStorage.setAttributes(self.baseAttributes, range:textStorage.fullRange)
         
         self.selectionBoundsView.alpha = 0.0
         
         if (animated) {
-            UIView.animateWithDuration(0.2, animations: { 
+            UIView.animateWithDuration(0.3, animations: {
                 self.preSelectionBoundsView.alpha = 0.0
             })
         } else {
