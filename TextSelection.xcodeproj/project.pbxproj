@@ -10,6 +10,8 @@
 		0FC247711CE6047E00822796 /* String+CharSearching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC247701CE6047E00822796 /* String+CharSearching.swift */; };
 		0FC247731CE624D900822796 /* DebugConsole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC247721CE624D900822796 /* DebugConsole.swift */; };
 		0FC247751CE62BC700822796 /* UILabel+Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC247741CE62BC700822796 /* UILabel+Space.swift */; };
+		0FC247781CE6328D00822796 /* HighlightLabelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC247771CE6328D00822796 /* HighlightLabelDelegate.swift */; };
+		0FC2477A1CE6468700822796 /* HighlightRegionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC247791CE6468700822796 /* HighlightRegionView.swift */; };
 		0FE7076C1CE4E5B7007CF30A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE7076B1CE4E5B7007CF30A /* AppDelegate.swift */; };
 		0FE7076E1CE4E5B7007CF30A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE7076D1CE4E5B7007CF30A /* ViewController.swift */; };
 		0FE707711CE4E5B7007CF30A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FE7076F1CE4E5B7007CF30A /* Main.storyboard */; };
@@ -24,6 +26,8 @@
 		0FC247701CE6047E00822796 /* String+CharSearching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+CharSearching.swift"; path = "Extensions/String+CharSearching.swift"; sourceTree = "<group>"; };
 		0FC247721CE624D900822796 /* DebugConsole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugConsole.swift; path = Views/DebugConsole.swift; sourceTree = "<group>"; };
 		0FC247741CE62BC700822796 /* UILabel+Space.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UILabel+Space.swift"; path = "Extensions/UILabel+Space.swift"; sourceTree = "<group>"; };
+		0FC247771CE6328D00822796 /* HighlightLabelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighlightLabelDelegate.swift; sourceTree = "<group>"; };
+		0FC247791CE6468700822796 /* HighlightRegionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HighlightRegionView.swift; path = Views/HighlightRegionView.swift; sourceTree = "<group>"; };
 		0FE707681CE4E5B7007CF30A /* TextSelection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextSelection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE7076B1CE4E5B7007CF30A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FE7076D1CE4E5B7007CF30A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FC247761CE6328400822796 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0FC247771CE6328D00822796 /* HighlightLabelDelegate.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		0FE7075F1CE4E5B7007CF30A = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +78,7 @@
 		0FE7076A1CE4E5B7007CF30A /* TextSelection */ = {
 			isa = PBXGroup;
 			children = (
+				0FC247761CE6328400822796 /* Protocols */,
 				0FE707841CE51293007CF30A /* Extensions */,
 				0FE707811CE511C6007CF30A /* Model */,
 				0FE707801CE4EF85007CF30A /* Views */,
@@ -83,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				0FE7077D1CE4E83C007CF30A /* HighlightLabel.swift */,
+				0FC247791CE6468700822796 /* HighlightRegionView.swift */,
 				0FC247721CE624D900822796 /* DebugConsole.swift */,
 			);
 			name = Views;
@@ -184,7 +198,9 @@
 				0FC247711CE6047E00822796 /* String+CharSearching.swift in Sources */,
 				0FC247731CE624D900822796 /* DebugConsole.swift in Sources */,
 				0FE707861CE512C4007CF30A /* NSAttributedString+TextSelection.swift in Sources */,
+				0FC247781CE6328D00822796 /* HighlightLabelDelegate.swift in Sources */,
 				0FE7076C1CE4E5B7007CF30A /* AppDelegate.swift in Sources */,
+				0FC2477A1CE6468700822796 /* HighlightRegionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

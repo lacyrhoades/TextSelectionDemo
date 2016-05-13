@@ -19,14 +19,16 @@ extension String {
     
     func nonWhitespaceCharacterIndexFrom(startingIndex: Int, advanceBy advance: Int) -> Int {
         var index = self.startIndex.advancedBy(startingIndex)
+        var lastIndex = index
         var char = self[index]
         var position = self.startIndex.distanceTo(index)
-        while (position > 0 && position < self.length - 1 && char != " ") {
+        while (position > 0 && position < self.length - 1 && char != " " && char != "\n") {
+            lastIndex = index
             index = index.advancedBy(advance)
             position = self.startIndex.distanceTo(index)
             char = self[index]
         }
-        return self.startIndex.distanceTo(index)
+        return self.startIndex.distanceTo(lastIndex)
     }
     
     var length: Int {
