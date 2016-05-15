@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F91AA661CE8A82000F2EE53 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F91AA651CE8A82000F2EE53 /* RootViewController.swift */; };
+		0F91AA681CE8A87200F2EE53 /* TextBasedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F91AA671CE8A87200F2EE53 /* TextBasedViewController.swift */; };
+		0F91AA6B1CE8AA1D00F2EE53 /* MultitouchTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F91AA6A1CE8AA1D00F2EE53 /* MultitouchTextView.swift */; };
 		0FC247711CE6047E00822796 /* String+CharSearching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC247701CE6047E00822796 /* String+CharSearching.swift */; };
 		0FC247731CE624D900822796 /* DebugConsole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC247721CE624D900822796 /* DebugConsole.swift */; };
 		0FC247751CE62BC700822796 /* UILabel+Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC247741CE62BC700822796 /* UILabel+Space.swift */; };
-		0FC247781CE6328D00822796 /* HighlightLabelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC247771CE6328D00822796 /* HighlightLabelDelegate.swift */; };
+		0FC247781CE6328D00822796 /* CustomTextViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC247771CE6328D00822796 /* CustomTextViewDelegates.swift */; };
 		0FC2477A1CE6468700822796 /* HighlightRegionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC247791CE6468700822796 /* HighlightRegionView.swift */; };
 		0FE7076C1CE4E5B7007CF30A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE7076B1CE4E5B7007CF30A /* AppDelegate.swift */; };
-		0FE7076E1CE4E5B7007CF30A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE7076D1CE4E5B7007CF30A /* ViewController.swift */; };
+		0FE7076E1CE4E5B7007CF30A /* LabelBasedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE7076D1CE4E5B7007CF30A /* LabelBasedViewController.swift */; };
 		0FE707711CE4E5B7007CF30A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FE7076F1CE4E5B7007CF30A /* Main.storyboard */; };
 		0FE707731CE4E5B7007CF30A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FE707721CE4E5B7007CF30A /* Assets.xcassets */; };
 		0FE707761CE4E5B7007CF30A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FE707741CE4E5B7007CF30A /* LaunchScreen.storyboard */; };
@@ -23,14 +26,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F91AA651CE8A82000F2EE53 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = ../RootViewController.swift; sourceTree = "<group>"; };
+		0F91AA671CE8A87200F2EE53 /* TextBasedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextBasedViewController.swift; sourceTree = "<group>"; };
+		0F91AA6A1CE8AA1D00F2EE53 /* MultitouchTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MultitouchTextView.swift; path = Views/MultitouchTextView.swift; sourceTree = "<group>"; };
 		0FC247701CE6047E00822796 /* String+CharSearching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+CharSearching.swift"; path = "Extensions/String+CharSearching.swift"; sourceTree = "<group>"; };
 		0FC247721CE624D900822796 /* DebugConsole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugConsole.swift; path = Views/DebugConsole.swift; sourceTree = "<group>"; };
 		0FC247741CE62BC700822796 /* UILabel+Space.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UILabel+Space.swift"; path = "Extensions/UILabel+Space.swift"; sourceTree = "<group>"; };
-		0FC247771CE6328D00822796 /* HighlightLabelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighlightLabelDelegate.swift; sourceTree = "<group>"; };
+		0FC247771CE6328D00822796 /* CustomTextViewDelegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextViewDelegates.swift; sourceTree = "<group>"; };
 		0FC247791CE6468700822796 /* HighlightRegionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HighlightRegionView.swift; path = Views/HighlightRegionView.swift; sourceTree = "<group>"; };
 		0FE707681CE4E5B7007CF30A /* TextSelection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextSelection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE7076B1CE4E5B7007CF30A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0FE7076D1CE4E5B7007CF30A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0FE7076D1CE4E5B7007CF30A /* LabelBasedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelBasedViewController.swift; sourceTree = "<group>"; };
 		0FE707701CE4E5B7007CF30A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0FE707721CE4E5B7007CF30A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FE707751CE4E5B7007CF30A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,10 +57,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F91AA691CE8A89E00F2EE53 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0F91AA651CE8A82000F2EE53 /* RootViewController.swift */,
+				0FE7076D1CE4E5B7007CF30A /* LabelBasedViewController.swift */,
+				0F91AA671CE8A87200F2EE53 /* TextBasedViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		0FC247761CE6328400822796 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				0FC247771CE6328D00822796 /* HighlightLabelDelegate.swift */,
+				0FC247771CE6328D00822796 /* CustomTextViewDelegates.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -78,16 +94,16 @@
 		0FE7076A1CE4E5B7007CF30A /* TextSelection */ = {
 			isa = PBXGroup;
 			children = (
-				0FC247761CE6328400822796 /* Protocols */,
-				0FE707841CE51293007CF30A /* Extensions */,
-				0FE707811CE511C6007CF30A /* Model */,
-				0FE707801CE4EF85007CF30A /* Views */,
 				0FE7076B1CE4E5B7007CF30A /* AppDelegate.swift */,
-				0FE7076D1CE4E5B7007CF30A /* ViewController.swift */,
-				0FE7076F1CE4E5B7007CF30A /* Main.storyboard */,
 				0FE707721CE4E5B7007CF30A /* Assets.xcassets */,
-				0FE707741CE4E5B7007CF30A /* LaunchScreen.storyboard */,
+				0FE707841CE51293007CF30A /* Extensions */,
 				0FE707771CE4E5B7007CF30A /* Info.plist */,
+				0FE707741CE4E5B7007CF30A /* LaunchScreen.storyboard */,
+				0FE7076F1CE4E5B7007CF30A /* Main.storyboard */,
+				0FE707811CE511C6007CF30A /* Model */,
+				0FC247761CE6328400822796 /* Protocols */,
+				0F91AA691CE8A89E00F2EE53 /* View Controllers */,
+				0FE707801CE4EF85007CF30A /* Views */,
 			);
 			path = TextSelection;
 			sourceTree = "<group>";
@@ -98,6 +114,7 @@
 				0FE7077D1CE4E83C007CF30A /* HighlightLabel.swift */,
 				0FC247791CE6468700822796 /* HighlightRegionView.swift */,
 				0FC247721CE624D900822796 /* DebugConsole.swift */,
+				0F91AA6A1CE8AA1D00F2EE53 /* MultitouchTextView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -193,13 +210,16 @@
 			files = (
 				0FE707831CE511CE007CF30A /* Selection.swift in Sources */,
 				0FE7077F1CE4E84E007CF30A /* HighlightLabel.swift in Sources */,
-				0FE7076E1CE4E5B7007CF30A /* ViewController.swift in Sources */,
+				0F91AA6B1CE8AA1D00F2EE53 /* MultitouchTextView.swift in Sources */,
+				0FE7076E1CE4E5B7007CF30A /* LabelBasedViewController.swift in Sources */,
+				0F91AA661CE8A82000F2EE53 /* RootViewController.swift in Sources */,
 				0FC247751CE62BC700822796 /* UILabel+Space.swift in Sources */,
 				0FC247711CE6047E00822796 /* String+CharSearching.swift in Sources */,
 				0FC247731CE624D900822796 /* DebugConsole.swift in Sources */,
 				0FE707861CE512C4007CF30A /* NSAttributedString+TextSelection.swift in Sources */,
-				0FC247781CE6328D00822796 /* HighlightLabelDelegate.swift in Sources */,
+				0FC247781CE6328D00822796 /* CustomTextViewDelegates.swift in Sources */,
 				0FE7076C1CE4E5B7007CF30A /* AppDelegate.swift in Sources */,
+				0F91AA681CE8A87200F2EE53 /* TextBasedViewController.swift in Sources */,
 				0FC2477A1CE6468700822796 /* HighlightRegionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

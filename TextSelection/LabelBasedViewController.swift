@@ -14,7 +14,7 @@ enum DebugMode {
     case ShowConsole
 }
 
-class ViewController: UIViewController {
+class LabelBasedViewController: UIViewController {
 
     var mode: [DebugMode] = []
     
@@ -25,6 +25,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = UIColor.whiteColor()
         
         self.scrollView = UIScrollView()
         self.scrollView.panGestureRecognizer.minimumNumberOfTouches = 2
@@ -93,7 +95,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: HighlightLabelDelegate {
+extension LabelBasedViewController: HighlightLabelDelegate {
     func labelSelectionDidChange() {
         let hide = self.label.selection == nil && self.label.preSelection == nil && self.label.highlightSelection == nil
         
