@@ -122,7 +122,7 @@ extension MultitouchTextView {
         
         let newSelection = Selection(first: before, last: after, attributes: [NSForegroundColorAttributeName: highlightTextColor, NSBackgroundColorAttributeName: highlightSelectionColor])
         
-        self.highlightSelection = newSelection.add(self.highlightSelection)
+        self.highlightSelection = newSelection
         self.preSelection = nil
         
         self.updateViews(false)
@@ -134,10 +134,7 @@ extension MultitouchTextView {
             return
         }
         
-        // not sure I need this
-        // self.updateTextManagers()
-        
-        let index = self.layoutManager.glyphIndexForPoint(point, inTextContainer: self.textContainer, fractionOfDistanceThroughGlyph: nil)
+        let index = self.layoutManager.characterIndexForPoint(point, inTextContainer: self.textContainer, fractionOfDistanceBetweenInsertionPoints: nil)
         
         if (index > self.highlightSelection!.first) {
             self.highlightSelection!.first = self.highlightSelection!.start

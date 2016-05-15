@@ -220,7 +220,7 @@ extension HighlightLabel {
 
         let newSelection = Selection(first: previousSpaceLocation, last: nextSpaceLocation, attributes: [NSForegroundColorAttributeName: highlightTextColor, NSBackgroundColorAttributeName: highlightSelectionColor])
         
-        self.highlightSelection = newSelection.add(self.highlightSelection)
+        self.highlightSelection = newSelection
         self.preSelection = nil
         
         self.updateViews(false)
