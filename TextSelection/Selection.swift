@@ -37,6 +37,8 @@ struct Selection {
         let start = min(selection.start, self.start)
         let end = max(selection.end, self.end)
         
-        return Selection(first: start, last: end)
+        return Selection(first: start, last: end, attributes: self.attributes)
     }
+    
+    var attributes: [String: AnyObject]
 }

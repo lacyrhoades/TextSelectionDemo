@@ -14,7 +14,7 @@ enum DebugMode {
     case ShowConsole
 }
 
-class ViewController: UIViewController {
+class LabelBasedViewController: UIViewController {
 
     var mode: [DebugMode] = []
     
@@ -93,7 +93,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: HighlightLabelDelegate {
+extension LabelBasedViewController: HighlightLabelDelegate {
     func labelSelectionDidChange() {
         let hide = self.label.selection == nil && self.label.preSelection == nil && self.label.highlightSelection == nil
         

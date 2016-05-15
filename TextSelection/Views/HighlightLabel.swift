@@ -218,7 +218,7 @@ extension HighlightLabel {
         let previousSpaceLocation = self.textStorage.string.nonWhitespaceCharacterIndexBefore(location)
         let nextSpaceLocation = self.textStorage.string.nonWhitespaceCharacterIndexAfter(location)
 
-        let newSelection = Selection(first: previousSpaceLocation, last: nextSpaceLocation)
+        let newSelection = Selection(first: previousSpaceLocation, last: nextSpaceLocation, attributes: [NSForegroundColorAttributeName: highlightTextColor, NSBackgroundColorAttributeName: highlightSelectionColor])
         
         self.highlightSelection = newSelection.add(self.highlightSelection)
         self.preSelection = nil
@@ -253,6 +253,7 @@ extension HighlightLabel {
             return
         }
         self.preSelection = highlightSelection.add(self.preSelection)
+        self.preSelection?.attributes = [NSForegroundColorAttributeName: preSelectionTextColor, NSBackgroundColorAttributeName: preSelectionColor]
         self.highlightSelection = nil
         self.updateViews(false)
         self.selectionDidChange()
@@ -265,6 +266,7 @@ extension HighlightLabel {
             return
         }
         self.selection = preSelection.add(self.selection)
+        self.selection?.attributes = [NSForegroundColorAttributeName: selectionTextColor, NSBackgroundColorAttributeName: selectionColor]
         self.preSelection = nil
         self.updateViews(false)
         self.selectionDidChange()
