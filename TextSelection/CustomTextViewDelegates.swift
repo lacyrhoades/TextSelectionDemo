@@ -1,5 +1,5 @@
 //
-//  HighlightLabelDelegate.swift
+//  CustomTextViewDelegates.swift
 //  TextSelection
 //
 //  Created by Lacy Rhoades on 5/13/16.
@@ -9,5 +9,9 @@
 import UIKit
 
 protocol HighlightLabelDelegate: class {
+    func labelSelectionDidChange()
+}
+
+protocol MultitouchTextViewDelegate: class {
     func labelSelectionDidChange()
 }

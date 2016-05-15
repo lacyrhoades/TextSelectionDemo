@@ -1,5 +1,5 @@
 //
-//  TestBasedViewController.swift
+//  TextBasedViewController.swift
 //  TextSelection
 //
 //  Created by Lacy Rhoades on 5/15/16.
@@ -8,9 +8,10 @@
 
 import UIKit
 
-class TextBasedViewController: UIViewController {
+class TextBasedViewController: UIViewController, MultitouchTextViewDelegate {
     
     var textView: MultitouchTextView!
+    var button: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,20 +19,47 @@ class TextBasedViewController: UIViewController {
         self.view.backgroundColor = UIColor.whiteColor()
         
         self.textView = MultitouchTextView()
-        self.textView.clipsToBounds = false
+        self.textView.customDelegate = self
+        self.textView.text = self.sampleText()
         self.textView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(self.textView)
         
-        self.setupConstraints()
+        self.button = UIButton(type:.Custom)
+        self.button.alpha = 0.0
+        self.button.addTarget(self, action: #selector(didTapButton), forControlEvents: .TouchUpInside)
+        self.button.setBackgroundImage(UIImage(named: "blue_circle"), forState: .Normal)
+        self.button.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(self.button)
         
-        self.textView.text = self.sampleText()
+        self.setupConstraints()
     }
     
     func setupConstraints() {
-        let metrics = ["margin": 25.0]
-        let views = ["textView": self.textView]
-        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[textView]|", options: [], metrics: metrics, views: views))
-        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-margin-[textView]|", options: [], metrics: metrics, views: views))
+        let metrics = ["topMargin": self.topLayoutGuide.length, "margin": 25.0, "buttonMargin": -100.0]
+        let views = ["textView": self.textView, "button": self.button]
+        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-margin-[textView]-margin-|", options: [], metrics: metrics, views: views))
+        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-topMargin-[textView]|", options: [], metrics: metrics, views: views))
+        
+        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:[button]-buttonMargin-|", options: [], metrics: metrics, views: views))
+        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:[button]-buttonMargin-|", options: [], metrics: metrics, views: views))
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        self.textView.setContentOffset(CGPoint(x: 0, y: -1 * self.topLayoutGuide.length), animated: true)
+    }
+    
+    func didTapButton() {
+        self.textView.didTapButton()
+    }
+    
+    func labelSelectionDidChange() {
+        let show = self.textView.shouldShowControlButton
+        
+        let alpha: CGFloat = show ? 0.75 : 0.0
+        
+        UIView.animateWithDuration(0.3, animations: {
+            self.button.alpha = alpha
+        })
     }
 }
 

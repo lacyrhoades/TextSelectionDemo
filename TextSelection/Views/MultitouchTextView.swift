@@ -13,6 +13,8 @@ class MultitouchTextView: UITextView {
     private var preSelection: Selection?
     private var selection: Selection?
     
+    var customDelegate: MultitouchTextViewDelegate?
+    
     override init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)
         
@@ -26,8 +28,6 @@ class MultitouchTextView: UITextView {
     }
     
     func setup() {
-        self.font = UIFont.systemFontOfSize(20.0)
-        
         self.editable = false
         
         self.gestureRecognizers?.forEach({ (recognizer) in
@@ -61,8 +61,7 @@ class MultitouchTextView: UITextView {
     
     var baseAttributes: [String: AnyObject] {
         get {
-            return [NSFontAttributeName: self.font!,
-                NSForegroundColorAttributeName: UIColor.darkTextColor()]
+            return [NSForegroundColorAttributeName: UIColor.darkTextColor()]
         }
     }
     
@@ -77,6 +76,20 @@ class MultitouchTextView: UITextView {
         self.preSelection = nil
         self.updateViews(true)
         self.selectionDidChange()
+    }
+    
+    func didTapButton() {
+        if (self.selection != nil && self.preSelection == nil) {
+            self.clearSelection()
+        } else {
+            self.appendPreSelectionToSelection()
+        }
+    }
+    
+    var shouldShowControlButton: Bool {
+        get {
+            return self.selection != nil || self.preSelection != nil
+        }
     }
 }
 
@@ -102,7 +115,7 @@ extension MultitouchTextView {
 
 extension MultitouchTextView {
     func startHighlighting(point: CGPoint) {
-        let index = self.layoutManager.glyphIndexForPoint(point, inTextContainer: self.textContainer, fractionOfDistanceThroughGlyph: nil)
+        let index = self.layoutManager.characterIndexForPoint(point, inTextContainer: self.textContainer, fractionOfDistanceBetweenInsertionPoints: nil)
         
         let before = self.textStorage.string.nonWhitespaceCharacterIndexBefore(index)
         let after = self.textStorage.string.nonWhitespaceCharacterIndexAfter(index)
@@ -185,6 +198,8 @@ extension MultitouchTextView {
     }
     
     func updateTextAttributes() {
+        self.textStorage.beginEditing()
+        
         self.textStorage.setAttributes(self.baseAttributes, range:self.textStorage.fullRange)
         
         if let highlightSelection = self.highlightSelection {
@@ -198,9 +213,13 @@ extension MultitouchTextView {
         if let selection = self.selection {
             self.textStorage.addAttributes(selection.attributes, range:selection.range)
         }
+        
+        self.textStorage.endEditing()
     }
     
     func selectionDidChange() {
-        // call out to anyone who cares
+        if let delegate = self.customDelegate {
+            delegate.labelSelectionDidChange()
+        }
     }
 }

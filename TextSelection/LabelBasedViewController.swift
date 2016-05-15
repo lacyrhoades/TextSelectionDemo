@@ -26,6 +26,8 @@ class LabelBasedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor.whiteColor()
+        
         self.scrollView = UIScrollView()
         self.scrollView.panGestureRecognizer.minimumNumberOfTouches = 2
         self.scrollView.translatesAutoresizingMaskIntoConstraints = false
